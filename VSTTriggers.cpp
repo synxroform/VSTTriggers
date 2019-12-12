@@ -79,7 +79,7 @@ void VSTNote_next(VSTNote *unit, int nsamp) {
     float trig = ZIN0(1);
 
     if (trig > 0.f && unit->_prevtrig <= 0.f) {
-        char velo = (char)(abs(trig * 256));
+        char velo = (char)(abs(trig * 255));
         char note = (char)(ZIN0(2));
         char chan = (char)(ZIN0(4));
         float dur = ZIN0(3);
